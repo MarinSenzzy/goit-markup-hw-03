@@ -6,6 +6,19 @@ body {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
 }
 
 a {
@@ -47,11 +60,36 @@ p {
     color: #434455;
 }
 
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 
+.section {
+    padding: 120px 0;
+}
 
 /* -------------- HEADER ----------------- */
 
-.header-nav {}
+header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
 
 .header-logo {
     font-family: "Raleway", sans-serif;
@@ -61,13 +99,18 @@ p {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    margin-right: 76px;
 }
 
 .header-logo span {
     color: #2e2f42;
 }
 
-.header-list {}
+.header-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
 .header-item {}
 
@@ -89,7 +132,10 @@ p {
     font-style: normal
 }
 
-.contacts-list {}
+.contacts-list {
+    display: flex;
+    gap: 40px;
+}
 
 .contacts-item {}
 
@@ -111,12 +157,22 @@ p {
 
 .hero-section {
     background-color: #2e2f42;
-    ;
+
+}
+
+.hero-container {
+    margin: 0 auto;
+    max-width: 496px;
+    padding: 188px 0;
 }
 
 .hero-title {}
 
 .btn {
+    display: block;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -124,6 +180,11 @@ p {
     color: #fff;
     background-color: #4d5ae5;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 16px 32px;
+    border: none;
+
+
 }
 
 .btn:hover,
@@ -138,11 +199,29 @@ p {
 
 .about {}
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 
-.about-list {}
+.about-list {
+    display: flex;
+    gap: 24px;
 
-.about-item {}
+}
+
+.about-item {
+    width: calc((100% - 3*24px) / 4);
+}
 
 .item-subtitle {}
 
@@ -154,23 +233,37 @@ p {
 
 .team-section {
     background-color: #f4f4fd;
+
 }
 
-.team-title {}
+.team-title {
+    margin-bottom: 72px;
+}
 
-.team-list {}
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 
 .team-item {
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+    width: calc((100% - 3*24px) / 4);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.team-img {}
+.team-img {
+    display: block;
+}
 
 .team-subtitle {
+    margin-top: 32px;
     text-align: center;
 }
 
 .team-text {
+    margin-top: 8px;
+    margin-bottom: 32px;
     text-align: center;
 }
 
@@ -181,20 +274,43 @@ p {
 
 .portf-title {}
 
-.portf-list {}
+.portf-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
 
-.portf-item {}
+.portf-item {
+    width: calc((100% - 2*24px) / 3);
+}
 
-.portf-img {}
+.portf-img {
+    display: block;
+}
 
-.portf-subtitle {}
+.portf-subtitle {
+    margin-top: 32px;
+    margin-left: 16px;
+}
 
-.portf-text {}
+.portf-text {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    margin-left: 16px;
+}
 
 /* -------------- FOOTER ----------------- */
 
 .footer {
     background-color: #2e2f42;
+    padding: 100px 0;
+}
+
+.container-footer {
+    max-width: 264px;
+    margin: 0;
+    margin-left: 156px;
 }
 
 .footer-logo {
